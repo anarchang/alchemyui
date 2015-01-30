@@ -24,17 +24,17 @@
         <div class="chart col-md-12">
           <ul>
             <li {{bind-attr style=efficientneighbors.height}}>
-              <div class="percent" {{render "efficientneighbors" efficientneighbors}}</div>
+              <div > {{render "efficientneighbors" efficientneighbors}}</div>
               <div class="skill">{{efficientneighbors.label}}</div>
             </li>
 
             <li {{bind-attr style=you.height}}>
-              <div class="percent" {{render "you" you}}</div>
+              <div > {{render "you" you}}</div>
               <div class="skill">{{you.label}}</div>
             </li>
 
             <li {{bind-attr style=averageneighbors.height}}>
-              <div class="percent" {{render "averageneighbors" averageneighbors}} </div>
+              <div > {{render "averageneighbors" averageneighbors}} </div>
               <div class="skill">{{averageneighbors.label}}</div>
             </li>
           </ul>
@@ -58,15 +58,15 @@
   </script>
 
   <script type="text/x-handlebars" id="efficientneighbors">
-    <div>{{value}}</div> <div>{{units}}</div>
+    <div class="value"><strong>{{value}}</strong></div> <div class="units">{{units}}</div>
   </script>
 
   <script type="text/x-handlebars" id="you">
-    <div>{{value}}</div> <div>{{units}}</div>
+    <div class="value"><strong>{{value}}</strong></div> <div class="units">{{units}}</div>
   </script>
 
   <script type="text/x-handlebars" id="averageneighbors">
-    <div>{{value}}</div> <div>{{units}}</div>
+    <div class="value"><strong>{{value}}</strong></div> <div class="units">{{units}}</div>
   </script>
 
 

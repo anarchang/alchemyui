@@ -13,6 +13,11 @@ h2 {
   text-align: center;
   vertical-align: bottom;
   border: 2px solid #666; }
+  .chart li .skill {
+    padding-top: 30px;
+    color: #666; }
+  .chart li .value {
+    line-height: 2; }
 
 #unit-buttons {
   margin-bottom: 50px; }

@@ -15,6 +15,15 @@ h2 {
 	text-align: center;
 	vertical-align: bottom;
 	border: 2px solid #666;
+
+	.skill {	
+		padding-top: 30px;
+		color: #666;
+	}
+
+	.value {
+		line-height: 2;
+	}
 }
 
 #unit-buttons {

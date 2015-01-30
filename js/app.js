@@ -20,21 +20,21 @@ App.UnitsRoute = Ember.Route.extend({
 		var url = "http://alchemy.spruce.mgmt:8080/energy/" + App.KWCHART[0].kwh + "/kWh/to/" + params.units; 
 
 		jQuery.getJSON(url, function(json) {
-			Ember.set(App.KWCHART[0], 'value', json.quantity.value);
+			Ember.set(App.KWCHART[0], 'value', json.quantity.value.toFixed(2));
 			Ember.set(App.KWCHART[0], 'units', json.quantity.units);
 		});
 
 		var url = "http://alchemy.spruce.mgmt:8080/energy/" + App.KWCHART[1].kwh + "/kWh/to/" + params.units; 
 
 		jQuery.getJSON(url, function(json) {
-			Ember.set(App.KWCHART[1], 'value', json.quantity.value);
+			Ember.set(App.KWCHART[1], 'value', json.quantity.value.toFixed(2));
 			Ember.set(App.KWCHART[1], 'units', json.quantity.units);
 		});
 
 		var url = "http://alchemy.spruce.mgmt:8080/energy/" + App.KWCHART[2].kwh + "/kWh/to/" + params.units; 
 
 		jQuery.getJSON(url, function(json) {
-			Ember.set(App.KWCHART[2], 'value', json.quantity.value);
+			Ember.set(App.KWCHART[2], 'value', json.quantity.value.toFixed(2));
 			Ember.set(App.KWCHART[2], 'units', json.quantity.units);
 		});				
 		
