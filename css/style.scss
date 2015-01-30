@@ -1,0 +1,26 @@
+h2 {
+	margin-bottom: 50px;
+}
+
+.chart {
+	width: 100
+}
+
+.chart li {
+	border-radius: 4px 4px 0 0;
+	display: inline-block;
+	height: 125px;
+	padding: 25px;
+	position: relative;
+	text-align: center;
+	vertical-align: bottom;
+	border: 2px solid #666;
+}
+
+#unit-buttons {
+	margin-bottom: 50px;
+
+	.btn {
+		margin: 5px 2px;
+	}
+}

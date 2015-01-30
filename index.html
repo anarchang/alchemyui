@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kilowatt-Hour Converter</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script type="text/x-handlebars">
+    
+
+    <div class="container">
+      <h2>Energy Use Comparison</h2>
+
+      <ul id="unit-buttons">
+      {{#each unit in units}}
+        {{#link-to 'units' unit.units tagname='li' class='btn btn-default'}}{{unit.units}}{{/link-to}}
+      {{/each}}
+      </ul>
+    
+      <div class="row">
+        <div class="chart col-md-12">
+          <ul>
+            <li {{bind-attr style=efficientneighbors.height}}>
+              <div class="percent" {{render "efficientneighbors" efficientneighbors}}</div>
+              <div class="skill">{{efficientneighbors.label}}</div>
+            </li>
+
+            <li {{bind-attr style=you.height}}>
+              <div class="percent" {{render "you" you}}</div>
+              <div class="skill">{{you.label}}</div>
+            </li>
+
+            <li {{bind-attr style=averageneighbors.height}}>
+              <div class="percent" {{render "averageneighbors" averageneighbors}} </div>
+              <div class="skill">{{averageneighbors.label}}</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    {{render "foo"}}
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="foo">
+    {{units}}
+  </script>
+
+  <script type="text/x-handlebars" id="index">
+
+
+  </script>
+
+  <script type="text/x-handlebars" id="efficientneighbors">
+    <div>{{value}}</div> <div>{{units}}</div>
+  </script>
+
+  <script type="text/x-handlebars" id="you">
+    <div>{{value}}</div> <div>{{units}}</div>
+  </script>
+
+  <script type="text/x-handlebars" id="averageneighbors">
+    <div>{{value}}</div> <div>{{units}}</div>
+  </script>
+
+
+  <script src="js/libs/jquery-1.10.2.js"></script>
+  <script src="js/libs/handlebars-v2.0.0.js"></script>
+  <script src="js/libs/ember-1.9.1.js"></script>
+    <!-- Ember Data -->
+  <script src="http://builds.emberjs.com/tags/v1.0.0-beta.12/ember-data.min.js"></script>
+  <script src="js/app.js"></script>
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <script src="tests/runner.js"></script>
+</body>
+</html>
